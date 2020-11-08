@@ -1,0 +1,42 @@
+#conteneur
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    border : 2px solid #444;
+}
+
+.element{
+    width: 250px;
+    height: 150px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.element:nth-child(n){
+    background-image: url("images/1.jpg");
+    border-radius: 10px;
+}
+
+.element:nth-child(2n){
+    background-image: url("images/2.jpg");
+}
+
+.element:nth-child(3n){
+    background-image: url("images/3.jpg");
+}
+
+#droite{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    border : 1px solid #444;
+    width: 25%;
+}
+
+#gauche{
+background-color :#F2F2F2;
+border : 1px solid turquoise;
+width: 70%;
+}
+
