@@ -1,42 +1,172 @@
-#conteneur
+/* Prends en compte la bordure de l'ensemble des éléments*/ 
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.google.com/specimen/Raleway');
+li, a
 {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
+	font-family: "Raleway", "Regular 400";
+	font-weight: 500;
+	font-size: 16px;
+	text-decoration: none;
+	color:black;
+}
+
+
+/* Menu */
+header
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 10%;
+	margin: 0;
+	padding: 0;
+}
+
+.logo
+{
+	cursor: pointer;
+	width: 8%;
+	height: 8%;
+}
+
+.nav__links
+{
+	list-style: none;
+}
+
+.nav__links li
+{
+	display: inline-block;
+}
+
+.nav__links li a:hover
+{
+    color:#0065FC;
+}
+
+.nav__links li:hover
+{
+    border-top: 2px solid #0065FC;
+}
+
+/* Gestion des icones */
+
+/* Modifications d'ensemble */
+i.fas
+{
+	font-size: 30px;
+	color:#0065FC;
+    border-radius: 50%;
+    float: left;
+}
+
+#mapsIcon
+{
+    background-color: #F2F2F2;
+}
+
+i.fas.fa-money-bill-wave {
+}
+
+
+
+#textFieldSearch{
+    float: left;
+}
+
+input#fPosition {
+    height: 35px;
+}
+
+button#btnSearch {
+    height: 35px;
+    background-color: #0065FC;
+    color: white;
+    cursor: pointer;
+}
+
+#divIcon{
     border : 2px solid #444;
 }
 
-.element{
-    width: 250px;
-    height: 150px;
-    flex-wrap: wrap;
-    display: flex;
+/* Elements du premier conteneur*/
+#conteneur
+{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-around;
+	border : 2px solid #444;
+	background-color :#F2F2F2;
+	border-radius: 10px;
 }
 
-.element:nth-child(n){
-    background-image: url("images/1.jpg");
-    border-radius: 10px;
+.element
+{
+	width: 250px;
+	height: 150px;
+	flex-wrap: wrap;
+	display: flex;
+	border-radius: 10px;
 }
 
-.element:nth-child(2n){
-    background-image: url("images/2.jpg");
+.element:nth-child(n)
+{
+	background-image: url("images/1.jpg");
 }
 
-.element:nth-child(3n){
-    background-image: url("images/3.jpg");
+.element:nth-child(2n)
+{
+	background-image: url("images/2.jpg");
 }
 
-#droite{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    border : 1px solid #444;
-    width: 25%;
+.element:nth-child(3n)
+{
+	background-image: url("images/3.jpg");
 }
 
-#gauche{
-background-color :#F2F2F2;
-border : 1px solid turquoise;
-width: 70%;
+#droite
+{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-around;
+	border : 1px solid #444;
+	width: 25%;
 }
 
+#gauche
+{
+	border : 1px solid turquoise;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#contour
+{
+	background-color: white;
+	border-radius: 10px;
+}
+
+
+
+/* Footer */
+/* Mise en place de 3 colonnes de taille équivalente */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 30px;
+  }
+
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.row{
+    background-color :#F2F2F2;
+}
