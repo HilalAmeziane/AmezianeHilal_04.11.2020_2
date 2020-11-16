@@ -3,7 +3,14 @@
     box-sizing: border-box;
 }
 
-@import url('https://fonts.google.com/specimen/Raleway');
+
+#corps {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Inconsolata/Raleway');
 li, a
 {
 	font-family: "Raleway", "Regular 400";
@@ -11,9 +18,12 @@ li, a
 	font-size: 16px;
 	text-decoration: none;
 	color:black;
+	padding: 2rem;
 }
 
-
+li#inscription {
+	font-weight: bold;
+}
 /* Menu */
 header
 {
@@ -49,7 +59,13 @@ header
 
 .nav__links li:hover
 {
-    border-top: 2px solid #0065FC;
+    border-top: 2.5px solid #0065FC;
+}
+
+#divMenu {
+    position: relative;
+    float: left;
+    z-index: 3;
 }
 
 /* Gestion des icones */
@@ -68,17 +84,19 @@ i.fas
     background-color: #F2F2F2;
 }
 
-i.fas.fa-money-bill-wave {
-}
-
-
 
 #textFieldSearch{
     float: left;
 }
 
+i.fas.fa-map-marker-alt {
+    border-color: red;
+}
+
 input#fPosition {
-    height: 35px;
+	height: 35px;
+	border-style: solid;
+    border-color: #F2F2F2;
 }
 
 button#btnSearch {
@@ -89,9 +107,32 @@ button#btnSearch {
 }
 
 #divIcon{
-    border : 2px solid #444;
+	border: 2px solid #d9d9d9;
+	border-radius: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: -2px;
 }
 
+.filtreRechercheTitre{
+    margin: 0px 2rem 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+#filtreRechercheIconeBillet{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DEEBFF;
+    border-radius: 100%;
+    height: 2rem;
+    width: 2rem;
+    min-height: 3.5rem;
+    min-width: 3.5rem;
+    margin: -2px;
+}
 /* Elements du premier conteneur*/
 #conteneur
 {
@@ -138,7 +179,6 @@ button#btnSearch {
 
 #gauche
 {
-	border : 1px solid turquoise;
 	width: 70%;
 	margin-left: auto;
 	margin-right: auto;
@@ -150,9 +190,18 @@ button#btnSearch {
 	border-radius: 10px;
 }
 
-
+#FiltreRecherche{
+	display: flex;
+	flex-wrap: wrap;
+}
 
 /* Footer */
+
+footer{
+	width: 100%;
+	background-color :#F2F2F2;
+}
+
 /* Mise en place de 3 colonnes de taille équivalente */
 .column {
     float: left;
@@ -167,6 +216,3 @@ button#btnSearch {
     clear: both;
   }
 
-.row{
-    background-color :#F2F2F2;
-}
