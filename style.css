@@ -3,12 +3,49 @@
     box-sizing: border-box;
 }
 
+body{
+	margin:0;
+	padding:0;
+	font-family: "Raleway", "Sans serif";
+}
 
 #corps {
     margin-left: 1%;
     margin-right: 1%;
 }
 
+.headerNav{
+	display: flex;
+    align-items: center;
+    grid-area: navbar;
+}
+
+.headerNavLink:hover {
+	border-top: 3px solid #0065FC;
+	color:#0065FC;
+}
+
+.headerNavLink {
+	border-top: 3px solid #ffffff;
+	font-weight: 600;
+}
+
+.signupButton{
+	font-weight: 800;
+	color:#0065FC;
+}
+
+#rechercheEntete{
+	margin-bottom: 0.5rem;
+}
+
+.rechercheTitre{
+	margin-bottom: 0.5rem;
+}
+
+.rechercheTitreSousTitre{
+	margin-top: 0;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Inconsolata/Raleway');
 li, a
@@ -38,8 +75,7 @@ header
 .logo
 {
 	cursor: pointer;
-	width: 8%;
-	height: 8%;
+    height: 3rem;
 }
 
 .nav__links
@@ -52,14 +88,14 @@ header
 	display: inline-block;
 }
 
-.nav__links li a:hover
+.nav__links li[data-active=true]
 {
     color:#0065FC;
 }
 
 .nav__links li:hover
-{
-    border-top: 2.5px solid #0065FC;
+{    
+	border-top: 3px solid #0065FC;
 }
 
 #divMenu {
@@ -73,7 +109,7 @@ header
 /* Modifications d'ensemble */
 i.fas
 {
-	font-size: 30px;
+	font-size: 20px;
 	color:#0065FC;
     border-radius: 50%;
     float: left;
@@ -81,7 +117,7 @@ i.fas
 
 #mapsIcon
 {
-    background-color: #F2F2F2;
+	background-color: #F2F2F2;
 }
 
 
@@ -90,7 +126,7 @@ i.fas
 }
 
 i.fas.fa-map-marker-alt {
-    border-color: red;
+	font-weight: 900;
 }
 
 input#fPosition {
@@ -113,12 +149,23 @@ button#btnSearch {
 	align-items: center;
 	justify-content: center;
 	margin: -2px;
+	margin-right: 2rem;
+	cursor: pointer;
+	font-weight: bold;
 }
 
 .filtreRechercheTitre{
-    margin: 0px 2rem 1rem 0;
+    margin: 0 2rem 1rem 0;
     display: flex;
-    align-items: center;
+	align-items: center;
+	margin: 0 1rem;
+}
+
+.filtreRechercheTitre{
+    margin: 0 2rem 1rem 0;
+    display: flex;
+	align-items: center;
+	margin: 0 1rem;
 }
 
 #filtreRechercheIconeBillet{
@@ -190,9 +237,10 @@ button#btnSearch {
 	border-radius: 10px;
 }
 
-#FiltreRecherche{
+#filtreRecherche{
 	display: flex;
 	flex-wrap: wrap;
+	margin-top: 2rem;
 }
 
 /* Footer */

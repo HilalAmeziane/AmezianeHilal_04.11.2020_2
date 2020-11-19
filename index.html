@@ -10,25 +10,22 @@
 	<body>
 		<div id="corps">
 		<!-- Menu -->
-		<header>
+		<header class="header">
 			<img class="logo" src="images/logo.png" alt="logo">
-			<nav>
-				<div id="divMenu">
-					<ul class="nav__links">
-						<li><a href="#">Hébergements</a></li>
-						<li><a href="#">Activités</a></li>
-						<li id="inscription"><a href="#">S'inscrire</a></li>
-					</ul>
-				</div>
+			<nav class="headerNav">
+				<a class= "headerNavLink" href="#">Hébergements</a>
+				<a class= "headerNavLink" href="#">Activités</a>
+				<a class= "signupButton" href="#">S'inscrire</a>
 			</nav>
 		</header>
-		<h2>Trouvez votre hébergement pour des vacances de rêve </h2>
-        <h4>En plein centre ville ou en pleine nature</h4>
-        
+
+		<h1 class="rechercheTitre">Trouvez votre hébergement pour des vacances de rêve </h1>
+        <p class="rechercheTitreSousTitre">En plein centre ville ou en pleine nature</p>
+
 		<div>
-			<div id="mapsIcon">
+			<span id="mapsIcon">
 				<i class="fas fa-map-marker-alt"></i>
-			</div>
+			</span>
 			<div id="textFieldSearch">
 				<input type="text" placeholder="Marseille, France" id="fPosition">
 				<br>
@@ -44,7 +41,7 @@
 			<div id="filtreRechercheIconeBillet">
 				<i class="fas fa-money-bill-wave"></i>
 			</div>
-            <h3>Economique</h3>
+            <span class="filtreRechercheTitre">Economique</span>
         </div>
 
         <div id="divIcon"> 
