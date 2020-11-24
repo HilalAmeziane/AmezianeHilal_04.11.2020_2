@@ -30,6 +30,13 @@ body{
 	font-weight: 600;
 }
 
+#searchResult{
+	display: flex;
+    align-items: center;
+    margin: 1rem 0 2rem 0;
+}
+
+
 .signupButton{
 	font-weight: 800;
 	color:#0065FC;
@@ -109,21 +116,20 @@ header
 /* Modifications d'ensemble */
 i.fas
 {
-	font-size: 20px;
-	color:#0065FC;
-    border-radius: 50%;
     float: left;
 }
 
-#mapsIcon
+.searchFormIcon
 {
 	background-color: #F2F2F2;
+    padding: 1rem 1.25rem;
+    border-radius: 1rem 0 0 1rem;
+    text-align: center;
 }
 
 
-#textFieldSearch{
-    float: left;
-}
+
+
 
 i.fas.fa-map-marker-alt {
 	font-weight: 900;
@@ -135,40 +141,52 @@ input#fPosition {
     border-color: #F2F2F2;
 }
 
-button#btnSearch {
-    height: 35px;
-    background-color: #0065FC;
+.searchFormButton {
+	background-color: #0065FC;
     color: white;
-    cursor: pointer;
-}
-
-#divIcon{
-	border: 2px solid #d9d9d9;
-	border-radius: 2rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: -2px;
-	margin-right: 2rem;
+    border: none;
+    border-radius: 0 1rem 1rem 0;
+    padding: 0 1rem;
+    font-size: 1rem;
 	cursor: pointer;
 	font-weight: bold;
+	font-family: "Raleway", "Sans serif";
 }
 
-.filtreRechercheTitre{
-    margin: 0 2rem 1rem 0;
+.searchForm{
+    display: inline-flex;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.searchFormInput{
+	border-top: #F2F2F2 1px solid;
+	border-bottom: #F2F2F2 1px solid;
+	border-right: none;
+    border-left: none;
+    padding: 0 1rem;
+    width: 13rem;
+    font-size: 1rem;
+    font-family: "Raleway", "Sans serif";
+}
+
+
+.searchFiltersResult{
     display: flex;
-	align-items: center;
-	margin: 0 1rem;
+    align-items: center;
+    margin-right: 2rem;
+    border: 2px solid #F2F2F2;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+	font-weight: bold;
+	cursor: pointer;
 }
 
-.filtreRechercheTitre{
-    margin: 0 2rem 1rem 0;
-    display: flex;
-	align-items: center;
-	margin: 0 1rem;
+.searchFiltersResult:hover{
+	background-color: #f3f3f3;
 }
 
-#filtreRechercheIconeBillet{
+.searchFiltersIcon{
 	display: flex;
     align-items: center;
     justify-content: center;
@@ -178,7 +196,38 @@ button#btnSearch {
     width: 2rem;
     min-height: 3.5rem;
     min-width: 3.5rem;
-    margin: -2px;
+	margin: -2px;
+	color: #0065FC;
+}
+
+.searchResultIcon {
+    height: 2rem;
+    width: 2rem;
+    min-height: 2rem;
+    min-width: 2rem;
+    border: solid 1px #d9d9d9;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	margin-right: 1rem;
+	color: #0065FC;
+}
+
+.searchResult{
+	display: flex;
+	align-items: center;
+	margin: 1rem 0 1rem 0;
+}
+
+.searchFiltersTitle{
+	margin: 0 2rem 1rem 0;
+	display: flex;
+	align-items: center;	
+}
+
+.searchFiltersTitleIcon{
+	margin: 0 1rem;
 }
 /* Elements du premier conteneur*/
 #conteneur

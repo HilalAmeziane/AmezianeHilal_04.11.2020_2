@@ -22,47 +22,53 @@
 		<h1 class="rechercheTitre">Trouvez votre hébergement pour des vacances de rêve </h1>
         <p class="rechercheTitreSousTitre">En plein centre ville ou en pleine nature</p>
 
-		<div>
-			<span id="mapsIcon">
+		<form class="searchForm" action="" method="GET">
+			<span class="searchFormIcon">
 				<i class="fas fa-map-marker-alt"></i>
 			</span>
-			<div id="textFieldSearch">
-				<input type="text" placeholder="Marseille, France" id="fPosition">
-				<br>
-			</div>
-			<div id="btnSearch">
-				<button type="button" id=btnSearch>Rechercher</button>
-			</div>
-        </div>
+			<input class="searchFormInput" placeholder="Marseille, France">
+				<button class="searchFormButton">Rechercher</button>
+        </form>
 		
 		<div id="filtreRecherche">
-        <h2 class="filtreRechercheTitre">Filtres</h2>
-        <div id="divIcon"> 
-			<div id="filtreRechercheIconeBillet">
+		<h2 class="searchFiltersTitle">Filtres</h2>
+		
+        <div class="searchFiltersResult"> 
+			<div class="searchFiltersIcon">
 				<i class="fas fa-money-bill-wave"></i>
 			</div>
-            <span class="filtreRechercheTitre">Economique</span>
-        </div>
-
-        <div id="divIcon"> 
-            <i class="fas fa-child"></i>
-            <h3>Familial</h3>
-        </div>
-        <div id="divIcon">  
-            <i class="fas fa-heart"></i>
-            <h3>Romantique</h3>
-        </div>
-        <div id="divIcon"> 
-            <i class="fas fa-dog"></i>
-            <h3>Animaux autorisés</h3>
-        </div>
+            <span class="searchFiltersTitleIcon">Économique</span>
 		</div>
 		
-		<div id="iconLogements">
-			<i class="fas fa-info"></i>
-			<h4>Plus de 500 logements sont disponibles dans cette ville</h4>
+		<div class="searchFiltersResult"> 
+			<div class="searchFiltersIcon">
+				<i class="fas fa-child"></i>
+			</div>
+            <span class="searchFiltersTitleIcon">Familial</span>
+		</div>
+		
+		<div class="searchFiltersResult"> 
+			<div class="searchFiltersIcon">
+				<i class="fas fa-heart"></i>
+			</div>
+            <span class="searchFiltersTitleIcon">Romantique</span>
+		</div>
+		
+		<div class="searchFiltersResult"> 
+			<div class="searchFiltersIcon">
+				<i class="fas fa-dog"></i>
+			</div>
+            <span class="searchFiltersTitleIcon">Animaux autorisés</span>
         </div>
-        
+	</div>
+
+	<div class="searchResult">
+			<div class ="searchResultIcon"> 
+				<i class="fas fa-info"></i>
+			</div>
+			<h4>Plus de 500 logements sont disponibles dans cette ville</h4>
+	</div>
+
 		<div>
 			<div id="conteneur">
 				<div id="gauche">
