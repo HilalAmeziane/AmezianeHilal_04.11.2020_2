@@ -4,14 +4,16 @@
 }
 
 body{
+    font-family: "Raleway", "Sans serif";
 	margin:0;
 	padding:0;
-	font-family: "Raleway", "Sans serif";
 }
 
-#corps {
-    margin-left: 1%;
-    margin-right: 1%;
+.main {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
 }
 
 .headerNav{
@@ -22,13 +24,21 @@ body{
 
 .headerNavLink:hover {
 	border-top: 3px solid #0065FC;
-	color:#0065FC;
+    color:#0065FC;
+    
 }
 
 .headerNavLink {
 	border-top: 3px solid #ffffff;
-	font-weight: 600;
+    font-weight: 600;
+    text-align: center;
+    transition-duration: 0.1s;
+    border-top: 3px transparent solid;
+    border-bottom: 3px transparent solid;
+    padding: 2rem;
 }
+
+
 
 #searchResult{
 	display: flex;
@@ -39,7 +49,8 @@ body{
 
 .signupButton{
 	font-weight: 800;
-	color:#0065FC;
+    color:#0065FC;
+    padding-left: 2rem;
 }
 
 #rechercheEntete{
@@ -57,32 +68,31 @@ body{
 @import url('https://fonts.googleapis.com/css?family=Inconsolata/Raleway');
 li, a
 {
-	font-family: "Raleway", "Regular 400";
 	font-weight: 500;
 	font-size: 16px;
 	text-decoration: none;
 	color:black;
-	padding: 2rem;
 }
 
 li#inscription {
 	font-weight: bold;
 }
 /* Menu */
-header
-{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 30px 10%;
-	margin: 0;
-	padding: 0;
+.header {
+    display: grid;
+    align-items: center;
+    max-width: 1440px;
+    margin: auto;
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "logo . navbar button";
 }
 
 .logo
 {
 	cursor: pointer;
     height: 3rem;
+    grid-area: logo;
+    padding: 0 2rem;
 }
 
 .nav__links
@@ -150,7 +160,6 @@ input#fPosition {
     font-size: 1rem;
 	cursor: pointer;
 	font-weight: bold;
-	font-family: "Raleway", "Sans serif";
 }
 
 .searchForm{
@@ -167,7 +176,6 @@ input#fPosition {
     padding: 0 1rem;
     width: 13rem;
     font-size: 1rem;
-    font-family: "Raleway", "Sans serif";
 }
 
 
@@ -229,10 +237,21 @@ input#fPosition {
 .searchFiltersTitleIcon{
 	margin: 0 1rem;
 }
-
-.hostingMainContentHeader{
-	grid-column: 1/-1;
+.hostingCardRating{
+    margin: 0 0.75rem 0.25rem 0.75rem;
 }
+
+.hostingMainTitle{
+	grid-column: 1/-1;
+	margin: 0;
+}
+
+.hostingTitle{
+	margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
 .hosting{
 	display: grid;
     column-gap: 2rem;
@@ -249,6 +268,13 @@ input#fPosition {
     padding: 2rem;
 }
 
+.hostingCardImageTitle{
+	margin: 0.25rem 0.75rem 0 0.75rem;
+}
+
+.hostingCardTitle{
+	margin: 0.25rem 0.75rem 0 0.75rem;
+}
 .hostingCard{
 	background-color: white;
     padding: 0.375rem;
@@ -269,6 +295,10 @@ input#fPosition {
 	border-radius: 1rem 1rem 0 0;
 }
 
+.hostingMainViewMore{
+    font-weight: bold;
+}
+
 .hostingCardRatingIcon[active=true]{
 	color: #0065FC;
 }
@@ -276,6 +306,55 @@ input#fPosition {
 .hostingCardRatingIcon[active=false]{
 	color: #F2F2F2;
 }
+
+.hostingPopular {
+	display: grid;
+    row-gap: 2rem;
+	grid-template-rows: auto repeat(3, 1fr);
+	background-color: #F2F2F2;
+    border-radius: 1.5rem;
+    padding: 2rem;
+}
+
+.hostingPopularCardImage{
+	position: relative;
+    min-height: 100%;
+    width: 33%;
+    min-width: 33%;
+    max-width: 33%;
+}
+
+.hostingPopularCardContent{
+	display: flex;
+    flex-direction: column;
+}
+
+.hostingPopularCardContentTitle{
+	margin: 0.25rem 0.75rem 0 0.75rem;
+}
+.hostingPopularContentTitle{
+	margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+}
+
+.hostingPopularContentSpace{
+    flex: 1;
+}
+
+.hostingPopularCardBlock{
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    overflow: auto;
+}
+
+.hostingCardImageImg{
+	border-radius: 1rem 0 0 1rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .element
 {
 	width: 250px;
@@ -300,7 +379,6 @@ input#fPosition {
 	background-image: url("images/3.jpg");
 }
 
-
 #contour
 {
 	background-color: white;
@@ -311,6 +389,73 @@ input#fPosition {
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 2rem;
+}
+
+/* Activity */
+.activity {
+    display: grid;
+    column-gap: 2rem;
+    margin: 4rem 0;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
+}
+
+.activityTitle {
+    grid-column: 1/-1;
+}
+
+.activityCardTitle{
+    margin: 1.2rem 1.5rem;
+}
+
+.activityCardLink1{
+    grid-row: 2/7;
+    grid-column: 1/2;
+}
+
+.activityCardLink2 {
+    grid-column: 2/3;
+    grid-row: 2/5;
+}
+
+.activityCardLink3 {
+    grid-column: 3/4;
+    grid-row: 2/7;
+}
+
+.activityCardLink4 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+.activityCardLink5 {
+    grid-column: 2/3;
+    grid-row: 6/7;
+}
+
+.activityCardLink6 {
+    grid-column: 4/5;
+    grid-row: 4/7;
+}
+
+.activityCardLink{
+    box-shadow: 0 0 20px #0000002e;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.activityCard{
+    position: relative;
+    flex: 1;
+}
+
+.activityCardImage{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* Footer */
@@ -328,9 +473,19 @@ footer{
   }
 
   /* Clear floats after the columns */
-.row:after {
+.footerColumn:after {
     content: "";
     display: table;
     clear: both;
   }
+  
+.footerColumn{
+    display: flex;
+    max-width: 100%;
+    width: 1440px;
+    margin: auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+  
 
