@@ -1,4 +1,4 @@
-/* Prends en compte la bordure de l'ensemble des éléments*/ 
+/* GENERAL */
 * {
     box-sizing: border-box;
 }
@@ -16,6 +16,8 @@ body{
     box-sizing: border-box;
 }
 
+
+/* HEADER */
 .headerNav{
 	display: flex;
     align-items: center;
@@ -38,14 +40,11 @@ body{
     padding: 2rem;
 }
 
-
-
 #searchResult{
 	display: flex;
     align-items: center;
     margin: 1rem 0 2rem 0;
 }
-
 
 .signupButton{
 	font-weight: 800;
@@ -66,7 +65,7 @@ body{
 }
 
 @import url('https://fonts.googleapis.com/css?family=Inconsolata/Raleway');
-li, a
+a
 {
 	font-weight: 500;
 	font-size: 16px;
@@ -137,10 +136,6 @@ i.fas
     text-align: center;
 }
 
-
-
-
-
 i.fas.fa-map-marker-alt {
 	font-weight: 900;
 }
@@ -177,7 +172,6 @@ input#fPosition {
     width: 13rem;
     font-size: 1rem;
 }
-
 
 .searchFiltersResult{
     display: flex;
@@ -239,6 +233,10 @@ input#fPosition {
 }
 .hostingCardRating{
     margin: 0 0.75rem 0.25rem 0.75rem;
+}
+
+.hostingCard:hover{
+    transform: scale(1.02);
 }
 
 .hostingMainTitle{
@@ -446,6 +444,9 @@ input#fPosition {
     flex-direction: column;
 }
 
+.activityCardLink:hover {
+    transform: scale(1.02);
+}
 .activityCard{
     position: relative;
     flex: 1;
@@ -484,8 +485,14 @@ footer{
     max-width: 100%;
     width: 1440px;
     margin: auto;
-    padding: 0 2rem;
+    padding: 0 0rem;
     box-sizing: border-box;
 }
   
+.footerColumnLink{
+    display: block;
+}
 
+.footerColumnLink:hover{
+    text-decoration: underline;
+}
